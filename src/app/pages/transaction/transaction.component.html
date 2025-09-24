@@ -1,0 +1,24 @@
+<h2>Transactions</h2>
+<table mat-table [dataSource]="transactions">
+    <ng-container
+        *ngFor="let column of displayedColumns"
+        matColumnDef="{{column.id}}"
+    >
+        <th mat-header-cell *matHeaderCellDef>{{column.displayName}}</th>
+        <ng-container *ngIf="!column.isAction">
+            <td mat-cell *matCellDef="let transaction">
+                {{column.applyPipe ? column.applyPipe(transaction[column.id]) : transaction[column.id]}}
+            </td>
+        </ng-container>
+        <ng-container *ngIf="column.isAction">
+            <td mat-cell *matCellDef="let transaction">
+                <button mat-icon-button (click)="openFlagTransactionDialog('0ms', '0ms', transaction)">
+                    <mat-icon>flag</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsIds"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsIds;"></tr>
+</table>

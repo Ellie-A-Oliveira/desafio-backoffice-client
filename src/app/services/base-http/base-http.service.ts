@@ -36,7 +36,7 @@ export class BaseHttpService<T> {
   private get httpOptions() {
     return {
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       }
     };
   }

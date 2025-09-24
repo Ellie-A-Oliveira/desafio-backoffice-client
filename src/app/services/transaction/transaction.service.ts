@@ -10,7 +10,7 @@ import { CreateTransactionFlagDto } from 'src/app/types/create-transaction-flag.
   providedIn: 'root'
 })
 export class TransactionService extends BaseHttpService<Transaction> {
-  private readonly uri = `/api/${environment.transactionMonitorApiVersion}/transaction`;
+  private readonly uri = `api/${environment.transactionMonitorApiVersion}/transaction`;
 
   constructor(protected override readonly http: HttpClient) {
     super(http);

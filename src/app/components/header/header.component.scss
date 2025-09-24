@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0;
+    background-color: inherit;
+
+    h1 {
+        margin-bottom: 0;
+        padding-right: .5rem;
+    }
+}

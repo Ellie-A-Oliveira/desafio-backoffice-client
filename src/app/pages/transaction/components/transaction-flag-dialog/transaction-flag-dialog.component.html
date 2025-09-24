@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Flag Transaction {{data.transactionId}}</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="form" #formRef="ngForm">
+        <mat-form-field>
+            <mat-label>Reason</mat-label>
+            <textarea
+                matInput
+                placeholder="Suspicious transaction"
+                [(ngModel)]="reason"
+                name="reason"
+                required></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Flag Type</mat-label>
+            <mat-select [(ngModel)]="selectedFlag" name="flag" required>
+                <ng-container *ngFor="let flag of flags">
+                    <mat-option [value]="flag">{{flag}}</mat-option>
+                </ng-container>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button matButton mat-dialog-close>Cancel</button>
+    <button [disabled]="!formRef.form.valid" matButton [mat-dialog-close]="submit" cdkFocusInitial>Flag</button>
+</mat-dialog-actions>

@@ -1,4 +1,6 @@
+import { TransactionFlagType } from "../models/transaction-flag/transaction-flag";
+
 export type CreateTransactionFlagDto = {
-    type: 'FRAUD_SUSPECT' | 'AML_CHECK' | 'HIGH_VALUE' | 'UNUSUAL_BEHAVIOR' | 'MANUAL_REVIEW';
+    type: TransactionFlagType;
     reason: string;
 };

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StaffMemberService extends BaseHttpService<StaffMember> {
-  private readonly uri = `/api/${environment.transactionMonitorApiVersion}/staff-member`;
+  private readonly uri = `api/${environment.transactionMonitorApiVersion}/staff-member`;
 
   constructor(protected override readonly http: HttpClient) {
     super(http);

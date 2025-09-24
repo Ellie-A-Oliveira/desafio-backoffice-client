@@ -1,0 +1,21 @@
+mat-sidenav {
+    min-width: 250px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    
+    &[ng-reflect-opened="false"] {
+        display: inherit !important;
+        visibility: visible !important;
+        transform: translate3d(-80%, 0, 0);
+    }
+
+    ::ng-deep .mat-drawer-inner-container {
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+}
+
+mat-sidenav-content {
+    padding: 2rem;
+    height: 100vh;
+}
