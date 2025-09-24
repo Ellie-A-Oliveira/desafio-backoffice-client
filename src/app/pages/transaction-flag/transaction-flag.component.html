@@ -1,4 +1,5 @@
 <h2>Transaction Flags</h2>
+<ng-container *ngIf="!transactionFlags.length">Loading...</ng-container>
 <table mat-table [dataSource]="transactionFlags">
     <ng-container
         *ngFor="let column of displayedColumns"

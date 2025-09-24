@@ -18,6 +18,7 @@ mat-sidenav {
 mat-sidenav-content {
     padding: 2rem;
     height: 100vh;
+    overflow: scroll;
 
     &.sidenav-closed {
         padding-left: 6rem;
