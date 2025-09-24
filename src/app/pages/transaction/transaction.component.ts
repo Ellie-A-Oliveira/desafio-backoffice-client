@@ -63,6 +63,7 @@ export class TransactionComponent implements OnInit, OnDestroy {
 
     this.subscriptions.push(dialogRef.afterClosed()
       .subscribe((transactionFlag) => {
+        console.log(transactionFlag);
         if (transactionFlag) {
           this.flagTransaction(transaction.transactionId, transactionFlag.reason, transactionFlag.flag);
         }

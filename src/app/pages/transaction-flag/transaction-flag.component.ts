@@ -19,6 +19,7 @@ export class TransactionFlagComponent {
 public transactionFlags: TransactionFlag[] = [];
   public displayedColumns: Column[] = [
     { id: 'flagId', displayName: 'Flag ID' },
+    { id: 'transactionId', displayName: 'Transaction ID' },
     { id: 'flagType', displayName: 'Flag Type' },
     { id: 'reason', displayName: 'Reason' },
     { id: 'createdAt', displayName: 'Created At', applyPipe: (date: Date) => this.datePipe.transform(date, 'yyyy-MM-dd HH:mm:ss') },

@@ -10,24 +10,10 @@ import { TransactionFlagType } from 'src/app/models/transaction-flag/transaction
 })
 export class TransactionFlagDialogComponent {
   data = inject(MAT_DIALOG_DATA);
-  
   flags = Object.values(TransactionFlagType);
-  @ViewChild("formRef") formRef!: NgForm;
-  
-  private dialogRef = inject(MatDialogRef<TransactionFlagDialogComponent>);
   
   constructor() { }
 
-  isFormValid(): boolean {
-    return this.formRef.form.valid;
-  }
-
   reason: string | undefined;
   selectedFlag: TransactionFlagType | undefined;
-
-  submit() {
-    if (this.isFormValid()) {
-      this.dialogRef.close({ reason: this.reason, flag: this.selectedFlag });
-    }
-  }
 }

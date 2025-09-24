@@ -1,5 +1,4 @@
 import { StaffMember } from "../staff-member/staff-member";
-import { Transaction } from "../transaction/transaction";
 
 export enum TransactionFlagSeverity {
     LOW = 'LOW',
@@ -30,17 +29,17 @@ export class TransactionFlag {
     createdAt: Date;
     severity: TransactionFlagSeverity;
     status: TransactionFlagStatus;
-    transaction: Transaction;
+    transactionId: string;
     createdBy: StaffMember;
 
-    constructor(flagId: string, flagType: TransactionFlagType, reason: string, createdAt: Date, severity: TransactionFlagSeverity, status: TransactionFlagStatus, transaction: Transaction, createdBy: StaffMember) {
+    constructor(flagId: string, flagType: TransactionFlagType, reason: string, createdAt: Date, severity: TransactionFlagSeverity, status: TransactionFlagStatus, transactionId: string, createdBy: StaffMember) {
         this.flagId = flagId;
         this.flagType = flagType;
         this.reason = reason;
         this.createdAt = createdAt;
         this.severity = severity;
         this.status = status;
-        this.transaction = transaction;
+        this.transactionId = transactionId;
         this.createdBy = createdBy;
     }
 }
