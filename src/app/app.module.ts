@@ -14,8 +14,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeModule } from './pages/home/home.module';
-import { TransactionModule } from './pages/transaction/transaction.module';
 
 @NgModule({
   declarations: [
@@ -36,8 +34,6 @@ import { TransactionModule } from './pages/transaction/transaction.module';
     MatIconModule,
     MatListModule,
     MatToolbarModule,
-    HomeModule,
-    TransactionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
