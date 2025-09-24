@@ -18,4 +18,8 @@ mat-sidenav {
 mat-sidenav-content {
     padding: 2rem;
     height: 100vh;
+
+    &.sidenav-closed {
+        padding-left: 6rem;
+    }
 }
